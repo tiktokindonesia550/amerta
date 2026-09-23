@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061426">
+  <meta name="description" content="AMERTA membantu perusahaan, brand, institusi, dan profesional membangun credibility, authority, dan growth melalui publikasi strategis di media nasional.">
+  <title>AMERTA | Credibility. Authority. Growth.</title>
+  <link rel="icon" href="/amerta-logo.png">
+  <style>
+    :root{
+      --navy:#061426; --navy2:#0a1d33; --gold:#c99a3a; --gold2:#f0c86a;
+      --cream:#f6f1e7; --white:#fff; --ink:#111827; --muted:#667085;
+      --line:rgba(201,154,58,.25); --shadow:0 22px 70px rgba(6,20,38,.13);
+      --radius:22px; --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .nav{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(6,20,38,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .navin{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800;letter-spacing:.18em;font-size:14px}
+    .brand img{width:42px;height:42px;object-fit:cover;object-position:center;border-radius:50%}
+    .navlinks{display:flex;gap:28px;color:#dbe5f2;font-size:13px}
+    .navlinks a:hover{color:var(--gold2)}
+    .navcta{padding:11px 17px;border:1px solid var(--gold);color:#fff;border-radius:999px;font-size:13px;font-weight:700}
+    .hero{padding:150px 0 90px;background:
+      radial-gradient(circle at 80% 25%,rgba(201,154,58,.18),transparent 28%),
+      linear-gradient(135deg,#061426 0%,#0a1d33 58%,#102844 100%);color:#fff;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold2);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+    .eyebrow:before{content:"";width:28px;height:1px;background:var(--gold2)}
+    h1{font-size:clamp(44px,6.2vw,78px);line-height:.98;letter-spacing:-.055em;margin:20px 0 25px;max-width:780px}
+    .hero h1 span{color:var(--gold2)}
+    .lead{font-size:18px;color:#c8d4e3;max-width:650px;margin:0 0 30px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:999px;font-weight:800;font-size:14px;transition:.2s transform,.2s box-shadow}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:linear-gradient(135deg,#f0c86a,#c99a3a);color:#081426;box-shadow:0 12px 35px rgba(201,154,58,.22)}
+    .btn-outline{border:1px solid rgba(255,255,255,.2);color:#fff;background:rgba(255,255,255,.04)}
+    .hero-card{border:1px solid rgba(240,200,106,.28);background:rgba(255,255,255,.055);border-radius:28px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.2)}
+    .hero-card img{width:100%;height:350px;object-fit:contain;object-position:center;border-radius:20px;background:#061426}
+    .mini-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}
+    .mini-proof div{border:1px solid rgba(255,255,255,.1);border-radius:15px;padding:14px}
+    .mini-proof strong{display:block;font-size:20px;color:#fff}
+    .mini-proof span{font-size:11px;color:#aebdd0}
+    .trust{background:var(--cream);border-bottom:1px solid #e6dece}
+    .trustin{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:23px 0}
+    .trustitem{display:flex;gap:10px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(201,154,58,.12)}
+    section{padding:100px 0}
+    .section-head{max-width:740px;margin-bottom:45px}
+    .kicker{font-size:12px;color:#a37521;letter-spacing:.18em;text-transform:uppercase;font-weight:900}
+    h2{font-size:clamp(34px,4vw,56px);line-height:1.05;letter-spacing:-.04em;margin:12px 0 16px}
+    .section-head p{color:var(--muted);font-size:17px}
+    .dark{background:var(--navy);color:#fff}
+    .dark .section-head p{color:#b7c5d5}
+    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .pillar{padding:30px;border:1px solid #e9e5dc;border-radius:var(--radius);background:#fff}
+    .dark .pillar{background:#0b2037;border-color:rgba(255,255,255,.09)}
+    .num{font-size:12px;color:var(--gold);font-weight:900;letter-spacing:.16em}
+    .pillar h3{font-size:23px;margin:12px 0 8px}
+    .pillar p{color:var(--muted);margin:0}
+    .dark .pillar p{color:#b7c5d5}
+    .sector-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+    .sector{padding:20px;border:1px solid #e8e5df;border-radius:17px;background:#fff;min-height:118px}
+    .sector strong{display:block;margin-bottom:5px}
+    .sector span{font-size:12px;color:var(--muted)}
+    .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .proof{border:1px solid rgba(255,255,255,.1);background:#0b2037;border-radius:20px;padding:25px}
+    .proof h3{margin:0 0 8px;font-size:19px}
+    .proof p{color:#b7c5d5;font-size:14px;margin:0 0 15px}
+    .proof a{color:var(--gold2);font-size:13px;font-weight:800}
+    .package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+    .package{border:1px solid #e6e2d8;border-radius:25px;padding:30px;background:#fff;position:relative;overflow:hidden}
+    .package.featured{border:1px solid var(--gold);box-shadow:var(--shadow)}
+    .package.featured:before{content:"REKOMENDASI UNTUK NARASI BERKELANJUTAN";position:absolute;top:0;right:0;left:0;text-align:center;background:var(--gold);color:#101c2c;padding:7px;font-size:9px;letter-spacing:.13em;font-weight:900}
+    .package.featured .package-top{padding-top:22px}
+    .package-name{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#8a651d}
+    .price{font-size:34px;font-weight:900;letter-spacing:-.04em;margin:12px 0 3px}
+    .package small{color:var(--muted)}
+    .package ul{padding-left:18px;color:#475467;font-size:14px;min-height:155px}
+    .package li{margin:9px 0}
+    .package .btn{width:100%}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{border-top:2px solid var(--gold);padding-top:18px}
+    .step b{font-size:12px;color:#9b721f;letter-spacing:.12em}
+    .step h3{font-size:19px;margin:9px 0 6px}
+    .step p{font-size:13px;color:var(--muted);margin:0}
+    .faq{max-width:850px}
+    details{border-top:1px solid #e4e0d8;padding:20px 0}
+    summary{cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:20px}
+    summary:after{content:"+";color:var(--gold);font-size:22px}
+    details[open] summary:after{content:"−"}
+    details p{color:var(--muted);font-size:14px;max-width:760px}
+    .cta{padding:80px 0;background:linear-gradient(135deg,#071629,#102944);color:#fff}
+    .cta-box{display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .cta h2{max-width:720px;margin-bottom:10px}
+    .cta p{color:#b8c6d6;max-width:700px}
+    footer{background:#04101f;color:#91a2b7;padding:35px 0 90px;font-size:12px}
+    .footerin{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-brand{color:#fff;font-weight:900;letter-spacing:.18em}
+    .mobile-cta{display:none}
+    @media(max-width:900px){
+      .navlinks{display:none}.hero-grid{grid-template-columns:1fr}.hero-card{max-width:650px}
+      .trustin{grid-template-columns:repeat(2,1fr)}.pillars,.package-grid{grid-template-columns:1fr}
+      .sector-grid{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr)}
+      .proof-grid{grid-template-columns:1fr}.cta-box{display:block}.cta .btn{margin-top:18px}
+      .mobile-cta{display:flex;position:fixed;bottom:14px;left:14px;right:14px;z-index:60}
+      .mobile-cta .btn{width:100%}.navcta{display:none}
+    }
+    @media(max-width:520px){
+      .container{width:min(calc(100% - 28px),var(--max))}.hero{padding-top:125px}
+      h1{font-size:45px}.lead{font-size:16px}.trustin,.sector-grid,.process{grid-template-columns:1fr}
+      section{padding:75px 0}.mini-proof{grid-template-columns:1fr}.hero-card img{height:270px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container navin">
+      <a class="brand" href="#top"><img src="/amerta-logo.png" alt="AMERTA">AMERTA</a>
+      <nav class="navlinks">
+        <a href="#layanan">Layanan</a><a href="#bukti">Publikasi</a><a href="#paket">Paket</a><a href="#proses">Proses</a><a href="#faq">FAQ</a>
+      </nav>
+      <a class="navcta" href="https://wa.me/6285138662465?text=Halo%20AMERTA%2C%20saya%20ingin%20konsultasi%20publikasi." target="_blank" rel="noopener">Konsultasi</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Mitra Media Utama</div>
+          <h1>Bangun <span>credibility.</span><br>Perkuat authority.<br>Dorong growth.</h1>
+          <p class="lead">AMERTA membantu perusahaan, brand, institusi, produk, program, dan profesional mengubah pencapaian menjadi eksposur media nasional yang dapat menjadi aset reputasi digital.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="https://wa.me/6285138662465?text=Halo%20AMERTA%2C%20saya%20ingin%20mendiskusikan%20kebutuhan%20publikasi%20kami." target="_blank" rel="noopener">Diskusikan Publikasi</a>
+            <a class="btn btn-outline" href="#bukti">Lihat Contoh Publikasi</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="/amerta-logo.png" alt="Logo AMERTA">
+          <div class="mini-proof">
+            <div><strong>Nasional</strong><span>Media relevan</span></div>
+            <div><strong>Strategis</strong><span>Narasi terarah</span></div>
+            <div><strong>Terukur</strong><span>Link & laporan</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="container trustin">
+        <div class="trustitem"><span class="dot"></span>Media nasional</div>
+        <div class="trustitem"><span class="dot"></span>Naskah profesional</div>
+        <div class="trustitem"><span class="dot"></span>Link artikel tayang</div>
+        <div class="trustitem"><span class="dot"></span>Pelaporan publikasi</div>
+      </div>
+    </div>
+
+    <section id="layanan">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Apa yang AMERTA kerjakan</div>
+          <h2>Publikasi ditempatkan sebagai bagian dari strategi reputasi.</h2>
+          <p>Anda membawa cerita, pencapaian, program, produk, atau agenda bisnis. AMERTA membantu mengemasnya menjadi materi yang layak dikomunikasikan melalui media yang relevan.</p>
+        </div>
+        <div class="pillars">
+          <article class="pillar"><div class="num">01</div><h3>Credibility</h3><p>Membantu membangun jejak publik yang dapat dirujuk ketika calon pelanggan, partner, investor, mahasiswa, tamu, atau komunitas mencari informasi tentang Anda.</p></article>
+          <article class="pillar"><div class="num">02</div><h3>Authority</h3><p>Narasi dapat diarahkan pada program, expertise, pencapaian, inovasi, event, ekspansi, atau positioning yang ingin diperkuat.</p></article>
+          <article class="pillar"><div class="num">03</div><h3>Growth</h3><p>Publikasi dapat mendukung awareness, peluncuran, promosi program, brand exposure, dan kebutuhan komunikasi bisnis lainnya.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Cakupan</div>
+          <h2>Untuk banyak kebutuhan komunikasi bisnis.</h2>
+          <p>Contoh kategori yang sudah disiapkan AMERTA berdasarkan materi publikasi dan company profile.</p>
+        </div>
+        <div class="sector-grid">
+          <div class="sector"><strong>Perusahaan & Brand</strong><span>Branding, produk, program, ekspansi</span></div>
+          <div class="sector"><strong>Properti</strong><span>Developer, kontraktor, proyek</span></div>
+          <div class="sector"><strong>Pendidikan</strong><span>Sekolah, universitas, yayasan</span></div>
+          <div class="sector"><strong>Hospitality</strong><span>Hotel, resort, villa</span></div>
+          <div class="sector"><strong>Franchise</strong><span>Kemitraan, peluang bisnis</span></div>
+          <div class="sector"><strong>F&B</strong><span>Restoran, cafe, produk makanan</span></div>
+          <div class="sector"><strong>Healthcare</strong><span>Klinik, rumah sakit, layanan</span></div>
+          <div class="sector"><strong>Travel & Organizer</strong><span>Travel, haji, umroh, event</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bukti" class="dark" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Contoh publikasi</div>
+          <h2>Lihat bentuk eksposurnya.</h2>
+          <p>Contoh di bawah berasal dari daftar publikasi AMERTA. Klik untuk membuka artikel pada media terkait.</p>
+        </div>
+        <div class="proof-grid">
+          <article class="proof"><h3>Property & Construction</h3><p>Contoh publikasi developer dan kontraktor pada kanal properti Kompas.</p><a href="https://www.kompas.com/properti/read/2026/05/18/160000521/hk-bangun-rsud-di-kota-tual-maluku-usung-konsep-modern-minimalis" target="_blank" rel="noopener">Buka contoh publikasi →</a></article>
+          <article class="proof"><h3>Education</h3><p>Contoh publikasi program dan branding institusi pendidikan.</p><a href="https://www.kompas.com/edu/read/2026/07/28/155249571/siapkan-talenta-digital-masa-depan-binus-university-perluas-program-ai-ke" target="_blank" rel="noopener">Buka contoh publikasi →</a></article>
+          <article class="proof"><h3>Hospitality</h3><p>Contoh publikasi branding hotel dan program hospitality.</p><a href="https://travel.kompas.com/read/2026/05/10/155137527/pengalaman-staycation-di-mercure-jakarta-grogol-tarif-rp-780000-an" target="_blank" rel="noopener">Buka contoh publikasi →</a></article>
+          <article class="proof"><h3>Business & Franchise</h3><p>Contoh publikasi kemitraan, peluang bisnis, dan perkembangan brand.</p><a href="https://biz.kompas.com/read/2025/11/07/125817528/lion-parcel-buka-kemitraan-untuk-calon-pengusaha-logistik" target="_blank" rel="noopener">Buka contoh publikasi →</a></article>
+          <article class="proof"><h3>Healthcare</h3><p>Contoh publikasi layanan klinik dan rumah sakit.</p><a href="https://health.kompas.com/read/2026/05/15/202117268/dentalogy-surabaya-sediakan-layanan-gigi-lengkap-berteknologi-modern" target="_blank" rel="noopener">Buka contoh publikasi →</a></article>
+          <article class="proof"><h3>Company & Product</h3><p>Contoh publikasi program, produk, event, dan aktivitas perusahaan.</p><a href="https://www.kompas.com/homey/read/2026/05/26/155512476/modena-resmikan-lima-gerai-home-center" target="_blank" rel="noopener">Buka contoh publikasi →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="paket">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Paket publikasi</div>
+          <h2>Pilih skala sesuai tujuan komunikasi Anda.</h2>
+          <p>Struktur paket mengikuti rate card AMERTA yang tersedia saat ini.</p>
+        </div>
+        <div class="package-grid">
+          <article class="package">
+            <div class="package-top"><div class="package-name">Brand Visibility</div><div class="price">Mulai Rp25 juta</div><small>1 publikasi · 1 media nasional</small></div>
+            <ul><li>Untuk membangun paparan awal</li><li>Pemilihan media sesuai kebutuhan</li><li>Naskah dan proses publikasi</li><li>Link artikel dan laporan</li></ul>
+            <a class="btn btn-outline" style="border-color:#d9caa9;color:#5e4515" href="https://wa.me/6285138662465?text=Saya%20tertarik%20Brand%20Visibility." target="_blank" rel="noopener">Konsultasikan</a>
+          </article>
+          <article class="package featured">
+            <div class="package-top"><div class="package-name">Authority Growth</div><div class="price">Rp75 juta</div><small>4–5 media · materi berbeda</small></div>
+            <ul><li>Untuk narasi yang lebih konsisten</li><li>Materi publikasi berbeda</li><li>FREE 100% SEO Optimization</li><li>Link artikel dan laporan</li></ul>
+            <a class="btn btn-gold" href="https://wa.me/6285138662465?text=Saya%20tertarik%20Authority%20Growth." target="_blank" rel="noopener">Diskusikan Paket</a>
+          </article>
+          <article class="package">
+            <div class="package-top"><div class="package-name">Market Domination</div><div class="price">Rp85 juta</div><small>3–5 publikasi · 1 media</small></div>
+            <ul><li>Untuk kebutuhan publikasi berskala besar</li><li>Materi publikasi berbeda</li><li>FREE SEM Google, Google Partnership, YouTube</li><li>FREE SMM Meta Network</li></ul>
+            <a class="btn btn-outline" style="border-color:#d9caa9;color:#5e4515" href="https://wa.me/6285138662465?text=Saya%20tertarik%20Market%20Domination." target="_blank" rel="noopener">Konsultasikan</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proses" style="background:var(--cream)">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Cara kerja</div>
+          <h2>Jelas dari konsultasi sampai link tayang.</h2>
+        </div>
+        <div class="process">
+          <div class="step"><b>01 · DISCOVER</b><h3>Tujuan & audiens</h3><p>Bahas tujuan, target audiens, materi, dan media yang relevan.</p></div>
+          <div class="step"><b>02 · CRAFT</b><h3>Materi publikasi</h3><p>Anda dapat mengirim materi. Tim AMERTA membantu penyusunan sesuai kebutuhan.</p></div>
+          <div class="step"><b>03 · PUBLISH</b><h3>Proses media</h3><p>Setelah persetujuan dan pembayaran, publikasi diproses sesuai ketentuan media.</p></div>
+          <div class="step"><b>04 · REPORT</b><h3>Link & laporan</h3><p>Anda menerima link artikel yang sudah tayang sebagai bukti publikasi.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">FAQ</div>
+          <h2>Hal yang biasanya ditanyakan sebelum mulai.</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Apakah AMERTA hanya menjual artikel?</summary><p>AMERTA memosisikan publikasi sebagai bagian dari komunikasi reputasi. Materinya dapat berupa branding, program, produk, event, pencapaian, informasi institusi, promosi, atau kebutuhan komunikasi lain yang sesuai ketentuan media.</p></details>
+          <details><summary>Media apa yang tersedia?</summary><p>Daftar AMERTA mencakup jaringan media nasional seperti Kompas, Kontan, Tribun, Sonora, dan berbagai kanal tematik. Pemilihan media mengikuti kebutuhan bisnis, target audiens, serta ketentuan media.</p></details>
+          <details><summary>Apakah bisa mencantumkan website?</summary><p>Bisa menyertakan website sesuai ketentuan media masing-masing.</p></details>
+          <details><summary>Berapa lama prosesnya?</summary><p>Materi artikel dari klien tercantum 1–7 hari kerja pada ketentuan AMERTA. Jika penyusunan dilakukan oleh AMERTA, waktunya mengikuti antrean dan kebutuhan materi.</p></details>
+          <details><summary>Apakah semua artikel pasti tayang di kanal yang saya pilih?</summary><p>Publikasi mengikuti kesepakatan, ketersediaan, dan ketentuan media. Untuk Kompas.com, penempatan kanal mengikuti ketentuan media, termasuk kanal bisnis, tekno, advertorial, dan kanal terkait.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-box">
+        <div>
+          <div class="kicker">Langkah berikutnya</div>
+          <h2>Apa yang sedang Anda bangun, luncurkan, atau perkuat?</h2>
+          <p>Kirim nama brand, program atau produk, tujuan publikasi, dan target audiens. AMERTA akan membantu memetakan bentuk publikasi yang relevan.</p>
+        </div>
+        <a class="btn btn-gold" href="https://wa.me/6285138662465?text=Halo%20AMERTA%2C%20saya%20ingin%20memetakan%20kebutuhan%20publikasi.%20Berikut%20detailnya%3A" target="_blank" rel="noopener">Mulai Konsultasi via WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footerin">
+      <div><div class="footer-brand">AMERTA</div><div>Credibility. Authority. Growth.</div></div>
+      <div>WhatsApp 0851 3866 2465 · Instagram @amerta.000000</div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta"><a class="btn btn-gold" href="https://wa.me/6285138662465?text=Halo%20AMERTA%2C%20saya%20ingin%20konsultasi%20publikasi." target="_blank" rel="noopener">Konsultasi Publikasi via WhatsApp</a></div>
+</body>
+</html>
