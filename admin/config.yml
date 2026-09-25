@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: tiktokindonesia550/amerta
+  branch: main
+  site_domain: amerta-mc4w.vercel.app
+  base_url: https://amerta-mc4w.vercel.app
+  auth_endpoint: api/auth
+
+site_url: https://amerta-mc4w.vercel.app
+logo_url: /assets/amerta-logo-transparent.png
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "case-studies"
+    label: "Bukti Publikasi"
+    description: "Tambah dan kelola bukti publikasi AMERTA."
+    files:
+      - label: "Database Publikasi"
+        name: "publications"
+        file: "content/case-studies.json"
+        format: "json"
+        fields:
+          - label: "Daftar Publikasi"
+            name: "items"
+            widget: "list"
+            summary: "{{title}} · {{media}} · {{sector}}"
+            fields:
+              - {label: "Judul", name: "title", widget: "string"}
+              - {label: "Sektor", name: "sector", widget: "select", options: ["Education","Hospitality","Property","Healthcare","Franchise & Business","F&B","Finance","Travel & Umrah","Event & CSR","Furniture & Interior","UMKM","Corporate & Brand","Other"]}
+              - {label: "Media", name: "media", widget: "string"}
+              - {label: "Logo Media", name: "media_logo", widget: "image", required: false}
+              - {label: "Link Publikasi", name: "url", widget: "string", pattern: ["^https?://", "Masukkan URL lengkap yang diawali https://"]}
+              - {label: "Konteks", name: "source_context", widget: "text", required: false}
+              - {label: "Tanggal Publikasi", name: "date", widget: "datetime", required: false}
+              - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
+
+  - name: "articles"
+    label: "SEO / Insight"
+    description: "Kelola artikel SEO AMERTA tanpa mengubah kode."
+    files:
+      - label: "Database Artikel"
+        name: "articles"
+        file: "content/articles.json"
+        format: "json"
+        fields:
+          - label: "Artikel"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - {label: "Slug", name: "slug", widget: "string", hint: "Contoh: jasa-publikasi-media-nasional"}
+              - {label: "Judul", name: "title", widget: "string"}
+              - {label: "Excerpt", name: "excerpt", widget: "text"}
+              - {label: "Kategori", name: "category", widget: "string"}
+              - {label: "Tanggal", name: "date", widget: "datetime"}
+              - {label: "Waktu Baca", name: "readTime", widget: "string", default: "4 menit"}
+              - {label: "Cover", name: "cover", widget: "image", required: false}
+              - {label: "Isi Artikel", name: "body", widget: "markdown"}
