@@ -5,8 +5,8 @@ backend:
   base_url: https://YOUR-OAUTH-ENDPOINT.example.com
   auth_endpoint: auth
 
-site_url: https://YOUR-AMERTA-DOMAIN.vercel.app
-display_url: https://YOUR-AMERTA-DOMAIN.vercel.app
+site_url: https://amerta-mc4w.vercel.app/
+display_url: https://amerta-mc4w.vercel.app/
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
