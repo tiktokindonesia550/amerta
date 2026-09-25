@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_AMERTA_REPOSITORY
+  branch: main
+  base_url: https://YOUR-OAUTH-ENDPOINT.example.com
+  auth_endpoint: auth
+
+site_url: https://YOUR-AMERTA-DOMAIN.vercel.app
+display_url: https://YOUR-AMERTA-DOMAIN.vercel.app
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "case-studies"
+    label: "Bukti Publikasi"
+    file: "content/case-studies.json"
+    format: "json"
+    fields:
+      - label: "Case Studies"
+        name: "items"
+        widget: "list"
+        fields:
+          - {label: "Judul", name: "title", widget: "string"}
+          - {label: "Sektor", name: "sector", widget: "select", options: ["Education","Hospitality","Property","Healthcare","Franchise & Business","F&B","Finance","Travel & Umrah","Event & CSR","Furniture & Interior","UMKM","Corporate & Brand"]}
+          - {label: "Media", name: "media", widget: "string"}
+          - {label: "Link Publikasi", name: "url", widget: "string"}
+          - {label: "Konteks", name: "source_context", widget: "string"}
+
+  - name: "articles"
+    label: "SEO / Insight"
+    file: "content/articles.json"
+    format: "json"
+    fields:
+      - label: "Articles"
+        name: "items"
+        widget: "list"
+        fields:
+          - {label: "Slug", name: "slug", widget: "string"}
+          - {label: "Judul", name: "title", widget: "string"}
+          - {label: "Excerpt", name: "excerpt", widget: "text"}
+          - {label: "Kategori", name: "category", widget: "string"}
+          - {label: "Tanggal", name: "date", widget: "datetime"}
+          - {label: "Waktu Baca", name: "readTime", widget: "string"}
+          - {label: "Isi", name: "body", widget: "text"}
