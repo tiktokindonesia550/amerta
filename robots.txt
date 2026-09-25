@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://YOUR-AMERTA-DOMAIN.vercel.app/sitemap.xml
