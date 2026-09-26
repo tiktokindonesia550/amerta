@@ -1,0 +1,82 @@
+backend:
+  name: github
+  repo: tiktokindonesia550/amerta
+  branch: main
+  base_url: https://amerta-mc4w.vercel.app
+  auth_endpoint: api/auth
+
+site_url: https://amerta-mc4w.vercel.app
+display_url: https://amerta-mc4w.vercel.app
+logo_url: https://amerta-mc4w.vercel.app/assets/amerta-logo-transparent.png
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "publications"
+    label: "Bukti Publikasi"
+    label_singular: "Publikasi"
+    files:
+      - label: "Daftar Publikasi"
+        name: "publications"
+        file: "content/publications.json"
+        format: "json"
+        fields:
+          - label: "Data Publikasi"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} · {{fields.media}}"
+            fields:
+              - {label: "Judul Artikel", name: "title", widget: "string"}
+              - {label: "Link Artikel", name: "url", widget: "string"}
+              - {label: "Media", name: "media", widget: "string"}
+              - label: "Kategori"
+                name: "category"
+                widget: "select"
+                options:
+                  - "Education"
+                  - "Hospitality"
+                  - "Property"
+                  - "Healthcare"
+                  - "Franchise & Business"
+                  - "F&B"
+                  - "Finance"
+                  - "Travel & Umrah"
+                  - "Event & CSR"
+                  - "Furniture & Interior"
+                  - "UMKM"
+                  - "Corporate & Brand"
+                  - "Otomotif"
+                  - "Lifestyle"
+                  - "Technology"
+                  - "Other"
+              - {label: "Tanggal Tayang", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+              - {label: "Ringkasan", name: "excerpt", widget: "text", required: false}
+              - {label: "Logo Media", name: "logo", widget: "image", required: false}
+              - {label: "Unggulan", name: "featured", widget: "boolean", default: false, required: false}
+
+  - name: "articles"
+    label: "Artikel / Insight"
+    label_singular: "Artikel"
+    files:
+      - label: "Artikel"
+        name: "articles"
+        file: "content/articles.json"
+        format: "json"
+        fields:
+          - label: "Artikel"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Judul", name: "title", widget: "string"}
+              - {label: "Slug", name: "slug", widget: "string"}
+              - {label: "Kategori", name: "category", widget: "string"}
+              - {label: "Ringkasan", name: "excerpt", widget: "text"}
+              - {label: "Tanggal", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+              - {label: "Featured Image", name: "image", widget: "image", required: false}
+              - {label: "SEO Title", name: "seo_title", widget: "string", required: false}
+              - {label: "SEO Description", name: "seo_description", widget: "text", required: false}
+              - {label: "Isi Artikel", name: "content", widget: "markdown"}
